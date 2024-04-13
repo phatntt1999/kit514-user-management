@@ -1,23 +1,19 @@
 <html>  
-<head></head>  
-  
-<body>  
-  
+    <head></head>  
+    <body>  
         <?php   
-  
-            foreach ($customers as $id => $customer)  
-            {  
-	echo "Cust ID: ".$customer->id."<br/>";
-	echo "Cust Fname: ".$customer->fname."<br/>";
-	echo "Cust Lname: ".$customer->lname."<br/>";
-	echo "Cust Email: ".$customer->email."<br/>";
+    
+        foreach ($customers as $id => $customer)  
+        {  
+            echo "Cust ID: ".$customer->id."<br/>";
+            echo "Cust Fname: ".$customer->fname."<br/>";
+            echo "Cust Lname: ".$customer->lname."<br/>";
+            echo "Cust Email: ".$customer->email."<br/>";
 
-	echo "<br/>";
+            echo "<br/>";
 
 
-            }  
-  
+        }  
         ?>  
-  
-</body>  
+    </body>  
 </html>  

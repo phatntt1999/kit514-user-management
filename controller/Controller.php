@@ -2,7 +2,8 @@
 
 include_once("model/Model.php");  
   
-class Controller {  
+class Controller 
+{  
      public $model;   
   
      public function __construct()    

@@ -2,22 +2,20 @@
 -- Table structure for table `customer`
 --
 
-CREATE TABLE IF NOT EXISTS `customer` (
-  `ID` int(11) NOT NULL,
-  `Firstname` varchar(50) NOT NULL,
-  `Lastname` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `customer` (
+  `id` int NOT NULL,
+  `fname` varchar(100) NOT NULL,
+  `lname` varchar(100) NOT NULL,
+  `email` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `customer`
 --
 
-INSERT INTO `customer` (`ID`, `Firstname`, `Lastname`, `email`) VALUES
-(1, 'Tom', 'Baker', 'Tom.Baker@utas.edu.au'),
-(2, 'Mutaz', 'Barika', 'mutaz.barika@utas.edu.au'),
-(3, 'David', 'Tennant', 'David.Tennant@utas.edu.au'),
-(4, 'Matt', 'Smith', 'Matt.Smith@utas.edu.au');
+INSERT INTO `customer` (`id`, `fname`, `lname`, `email`) VALUES
+(1, 'Lindsay', 'Wells', 'lfwells@nowhere.com'),
+(2, 'Ian', 'Lewis', 'poopistasty@hotmail.com');
 
 --
 -- Indexes for dumped tables
@@ -27,7 +25,18 @@ INSERT INTO `customer` (`ID`, `Firstname`, `Lastname`, `email`) VALUES
 -- Indexes for table `customer`
 --
 ALTER TABLE `customer`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `customer`
+--
+ALTER TABLE `customer`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

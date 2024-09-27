@@ -1,17 +1,28 @@
 <html>
-<head><title> MVC Webpage </title></head>
+<head>
+    <title> Homepage </title>
+    <link rel="stylesheet" href="public/css/home.css">
+</head>
 <body>
 
-<h1>Welcome to MVC (Customer Example)</h1>
 
-<?php
-// include controller  
-include_once("controller/Controller.php");  
-  
-//Initilize controller
-$controller = new Controller();  
+<div class="container">
+    <?php
+    session_start();
 
-//Run logic
-$controller->execute();  
+    if (isset($_SESSION['email'])) {
+        header("Location: login/welcome.php");
+        exit();
+    }
+    else {
+    ?>
+        <h1>Welcome to KIT514</h1>
+        <h2>You have account? <a href="login/login.php">Sign in</a></h2>
+        <h3><a href="registration/registration.php">Registration</a></h3>
+    <?php
+    }
+    ?>
+    
+</div>
 
-?>
+</body>

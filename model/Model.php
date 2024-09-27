@@ -1,27 +1,27 @@
 <?php
-include_once("DBConn.php");  
-include_once("Customer.php");  
+// include_once("DBConn.php");  
+// include_once("User.php");  
   
-class Model 
-{  
-    public function getCustomerList()  
-    {  
-        global $mysqli;
+// class Model 
+// {  
+//     public function getUserList()  
+//     {  
+//         global $mysqli;
 
-        $sql = "SELECT * FROM customer";
+//         $sql = "SELECT * FROM users";
 
-        $result = $mysqli->query($sql);
+//         $result = $mysqli->query($sql);
 
-        $arr = array();
-        while($row = $result->fetch_array(MYSQLI_ASSOC))
-        {
-            $arr[$row['id']] = new Customer($row['id'], $row['fname'],$row['lname'],$row['email']);
-        }
-        return $arr;
+//         $arr = array();
+//         while($row = $result->fetch_array(MYSQLI_ASSOC))
+//         {
+//             $arr[$row['id']] = new User($row['id'], $row['fname'],$row['lname'],$row['email']);
+//         }
+//         return $arr;
 
-    }        
+//     }        
   
-    // public function getCustomerByID($id)  {   }       
-    // public function getCustomerByName($name)  {   } 
-} 
+//     public function getUserByID($id)  {   }       
+//     public function getUserByName($name)  {   } 
+// } 
 ?>
